@@ -74,7 +74,7 @@ window["10IPL"] = (() => {
                 break;
         } while (1);
 
-        return print;
+        return new Uint8Array(print);
     };
 
     var build = (program) => {
