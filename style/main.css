@@ -1,0 +1,82 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.5;
+    color: #202020;
+    margin: 8pt;
+    padding: 0;
+    border: 0;
+}
+
+body > * {
+    display: block;
+}
+
+code, textarea {
+    font-family: 'Roboto Mono', consolas, courier, monospace;
+    color: #202020;
+}
+
+b {
+    font-size: 10pt;
+    margin-bottom: 10pt;
+    line-height: 1.5;
+}
+
+i {
+    font-size: 8pt;
+    margin-bottom: 10pt;
+    line-height: 1.5;
+    font-style: normal;
+}
+
+.incorrect {
+    color: #a00000;
+    margin-top: -4pt;
+    display: none;
+}
+
+hr {
+    margin: 20pt 0;
+    clear: both;
+}
+
+code {
+    padding: 1pt 4pt;
+    margin-bottom: -1pt;
+    display: inline-block;
+    background-color: #e6e6e6;
+}
+
+textarea {
+    margin-bottom: 10pt;
+    font-size: 8pt;
+    padding: 4pt;
+    border: 1px solid #808080;
+    word-break: break-all;
+}
+
+select {
+    font-family: inherit;
+    margin-bottom: 10pt;
+    font-size: 8pt;
+    padding: 4pt;
+    border: 1px solid #808080;
+    background-color: #ffffff;
+}
+
+button {
+    font-family: inherit;
+    margin-bottom: 20pt;
+    margin-right: 10pt;
+    font-size: 8pt;
+    padding: 4pt 8pt;
+    border: 1px solid #808080;
+    background-color: #ffffff;
+    float: left;
+    cursor: pointer;
+}
+
+textarea:focus, select:focus, button:focus {
+    border: 1px solid #6090f0;
+    outline: 1px solid #6090f0;
+}
