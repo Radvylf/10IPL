@@ -18,14 +18,6 @@ window.onload = function() {
         cgcc_post: document.getElementById("cgcc_post")
     };
     
-    layout.input_format.onchange = () => {
-        layout.input_tip.textContent = ({
-            "Binary": "0000000 11111111",
-            "Numbers": "[0, 1, 2, 100, 255]",
-            "Text": "Hello, world!"
-        })[layout.input_format.value];
-    };
-    
     var interpreter = window["10IPL"];
     
     if (!interpreter)
@@ -53,10 +45,19 @@ window.onload = function() {
             return "";
         };
         
+        if (!find_program())
+            return;
+        
         [
             layout.program.value, layout.binary.value, layout.input.value,
             layout.input_format.selectedIndex, layout.print_format.selectedIndex
         ] = JSON.parse(atob(find_program().replace(/_/g, "/").replace(/-/g, "+")));
+        
+        layout.input_tip.textContent = ({
+            "Binary": "0000000 11111111",
+            "Numbers": "[0, 1, 2, 100, 255]",
+            "Text": "Hello, world!"
+        })[layout.input_format.value];
     };
     
     var update_input = () => {
@@ -102,6 +103,14 @@ window.onload = function() {
         }
         
         return input;
+    };
+    
+    layout.input_format.onchange = () => {
+        layout.input_tip.textContent = ({
+            "Binary": "0000000 11111111",
+            "Numbers": "[0, 1, 2, 100, 255]",
+            "Text": "Hello, world!"
+        })[layout.input_format.value];
     };
     
     layout.run_program.onclick = () => {
@@ -281,4 +290,6 @@ window.onload = function() {
             "[Try it online!](https://redwolfprograms.github.io/10IPL?p=" + save() + ")"
         );
     };
+    
+    restore();
 };
