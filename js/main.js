@@ -233,6 +233,11 @@ window.onload = function() {
     };
     
     layout.build_program.onclick = () => {
+        layout.incorrect_program.style.display = "";
+        layout.incorrect_binary.style.display = "";
+        layout.incorrect_input.style.display = "";
+        layout.incorrect_print.style.display = "";
+        
         var binary;
         
         try {
@@ -254,6 +259,11 @@ window.onload = function() {
     };
     
     layout.build_binary.onclick = () => {
+        layout.incorrect_program.style.display = "";
+        layout.incorrect_binary.style.display = "";
+        layout.incorrect_input.style.display = "";
+        layout.incorrect_print.style.display = "";
+        
         var binary = layout.binary.value.replace(/\s+/g, "");
                 
         if (binary.match(/[^01]/)) {
