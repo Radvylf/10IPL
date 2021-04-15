@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>10IPL</title>
+        
+        <meta name="author" content="Ryan Tosh (Redwolf Programs)">
+        <meta name="description" content="10IPL interpreter frontend">
+        <meta name="keywords" content="10IPL,10IPL_T,10IPL_M,Interpreter,10IPL Interpreter,Online Interpreter,RedwolfPrograms,Redwolf Programs,Ryan Tosh">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="style/fonts.css"/>
+        <link rel="stylesheet" href="style/main.css"/>
+        
+        <script src="js/interpreter.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <b>Program:</b>
+        <textarea id="program" rows="16" cols="80"></textarea>
+        <i id="incorrect_program" class="incorrect">Incorrect program</i>
+        
+        <b>Binary:</b>
+        <textarea id="binary" rows="8" cols="80"></textarea>
+        <i id="incorrect_binary" class="incorrect">Incorrect binary</i>
+        
+        <b>Input:</b>
+        
+        <select id="input_format">
+            <option selected>Binary</option>
+            <option>Numbers</option>
+            <option>Text</option>
+        </select>
+        
+        <i>Format: <code id="input_tip">00000000 11111111</code></i>
+        
+        <textarea id="input" rows="8" cols="80"></textarea>
+        <i id="incorrect_input" class="incorrect">Invalid input</i>
+        
+        <button id="run_program">Run Program</button>
+        <button id="run_binary">Run Binary</button>
+        <button id="build_program">Build Program</button>
+        <button id="build_binary">Build Binary</button>
+        
+        <hr/>
+        
+        <b>Result:</b>
+        
+        <select id="print_format">
+            <option selected>Binary</option>
+            <option>Numbers</option>
+            <option>Text</option>
+        </select>
+        
+        <textarea id="print" rows="8" cols="80" readonly></textarea>
+        <i id="incorrect_print" class="incorrect">Invalid character</i>
+        
+        <hr/>
+        
+        <b>CGCC Post:</b>
+        <textarea id="cgcc_post" rows="10" cols="80" readonly></textarea>
+    </body>
+</html>
