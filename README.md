@@ -19,7 +19,7 @@ The `rp0` and `rp1` registers form `rp`, the pointer register used for memory ac
 
 The online implementation of 10IPL has 64 KiB of memory. This is used for both code and data. All instructions are represented in one byte, and are loaded into memory starting at `0x0000`. Input and print use buffers, which are 64 KiB each. Additional input and output will be discarded. If input is exhausted, taking input will return `00000000`. However, if 64 KiB or more of input are given, the pointer will wrap back around to the first input again.
 
-# Instructions
+## Instructions
 
 - Zero: Writes `00000000` to a register
 - Increment: Adds one to a register, or wraps around to zero
@@ -32,7 +32,7 @@ The online implementation of 10IPL has 64 KiB of memory. This is used for both c
 - Write: Writes to memory (at `rp`) from a register
 - Jump: Jumps to `rp`
 
-# Programs
+## Programs
 
 Programs can be written in an assembly-like language. The following aliases can be used for operations:
 
@@ -46,3 +46,5 @@ Programs can be written in an assembly-like language. The following aliases can 
 - Read: `read`, `rdd`, `rd`
 - Write: `write`, `writ`, `wrt`, `wrd`, `wr`, `wt`
 - Jump: `jump`, `jmp`, `jm`, `jp`, `j`
+
+Recommended: `zro`, `inr`, `rtr`, `prt`, `xor`, `nor`, `inp`, `rdd`, `wrd`, `jmp`
